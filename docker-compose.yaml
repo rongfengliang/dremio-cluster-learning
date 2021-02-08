@@ -1,0 +1,63 @@
+version: "3"
+services:
+  zookeeper:
+    image: zookeeper
+    ports:
+    - "2181:2181"
+    - "8080:8080"
+  dremio1:
+    image: dremio/dremio-oss:13.0
+    environment:
+     - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+    volumes: 
+    - "./dremio1.conf:/opt/dremio/conf/dremio.conf"
+    - "./datas/data:/opt/dremio/data"
+    ports:
+      - "9047:9047"
+      - "31010:31010"
+  dremio1-1:
+    image: dremio/dremio-oss:13.0
+    environment:
+     - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+    volumes: 
+    - "./dremio1-1.conf:/opt/dremio/conf/dremio.conf"
+    - "./datas/data2:/opt/dremio/data"
+    ports:
+      - "9057:9047"
+      - "31020:31010"
+  dremio2:
+    image: dremio/dremio-oss:13.0
+    environment:
+     - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+    volumes: 
+    - "./dremio3.conf:/opt/dremio/conf/dremio.conf"
+    ports:
+      - "9048:9047"
+      - "31011:31010"
+  dremio3:
+    image: dremio/dremio-oss:13.0
+    environment:
+     - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+    volumes: 
+    - "./dremio3.conf:/opt/dremio/conf/dremio.conf"
+    ports:
+      - "9049:9047"
+      - "31012:31010"
+  pg:
+    image: postgres:12
+    environment:
+      - "POSTGRES_PASSWORD=dalong"
+    ports:
+      - "5432:5432"
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
+  minio: 
+    image: minio/minio
+    command: server /data
+    ports: 
+    - "9000:9000"
+    environment:
+      - "MINIO_ACCESS_KEY=minio"
+      - "MINIO_SECRET_KEY=minio123"
