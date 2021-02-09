@@ -1,2 +1,5 @@
 datas/data
 datas/data2
+logs/dremio*
+jars
+logs/apps

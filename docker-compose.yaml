@@ -9,9 +9,11 @@ services:
     image: dremio/dremio-oss:13.0
     environment:
      - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+     - DREMIO_LOG_DIR=/var/log/dremio
     volumes: 
     - "./dremio1.conf:/opt/dremio/conf/dremio.conf"
     - "./datas/data:/opt/dremio/data"
+    - "./logs/dremio1:/var/log/dremio"
     ports:
       - "9047:9047"
       - "31010:31010"
@@ -19,18 +21,27 @@ services:
     image: dremio/dremio-oss:13.0
     environment:
      - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+     - DREMIO_LOG_DIR=/var/log/dremio
     volumes: 
     - "./dremio1-1.conf:/opt/dremio/conf/dremio.conf"
     - "./datas/data2:/opt/dremio/data"
+    - "./logs/dremio2:/var/log/dremio"
     ports:
       - "9057:9047"
       - "31020:31010"
+  crate:
+    image: crate
+    ports:
+    - "4200:4200"
+    - "5433:5432"
   dremio2:
     image: dremio/dremio-oss:13.0
     environment:
      - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+     - DREMIO_LOG_DIR=/var/log/dremio
     volumes: 
     - "./dremio3.conf:/opt/dremio/conf/dremio.conf"
+    - "./logs/dremio3:/var/log/dremio"
     ports:
       - "9048:9047"
       - "31011:31010"
@@ -38,8 +49,10 @@ services:
     image: dremio/dremio-oss:13.0
     environment:
      - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dsaffron.default.charset=UTF-16LE -Dsaffron.default.nationalcharset=UTF-16LE -Dsaffron.default.collat​​ion.name=UTF-16LE\$en_US
+     - DREMIO_LOG_DIR=/var/log/dremio
     volumes: 
     - "./dremio3.conf:/opt/dremio/conf/dremio.conf"
+    - "./logs/dremio4:/var/log/dremio"
     ports:
       - "9049:9047"
       - "31012:31010"
