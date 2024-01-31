@@ -1,0 +1,106 @@
+repo_name: rongfengliang/dremio-cluster-learning
+report_id: f06c829e3e6fefdf980ffdfb296a2647
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T08:02:14+00:00'
+requested_by: rongfengliang
+provider: github
+branch: master
+detected_tools_count: 8
+tools:
+- name: Golang
+  description: An open source programming language that makes it easy to build simple,
+    reliable, and efficient software
+  website_url: http://golang.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning/blob/master/docker-compose.yaml
+  detection_source: docker-compose.yaml
+  last_updated_by: rong fengliang
+  last_updated_on: 2021-02-08 04:20:17.000000000 Z
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning/blob/master/test.sql
+  detection_source: test.sql
+  last_updated_by: rong fengliang
+  last_updated_on: 2021-02-08 04:20:17.000000000 Z
+- name: Minio
+  description: AWS S3 open source alternative written in Go
+  website_url: https://minio.io/
+  license: AGPL-3.0
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Cloud Storage
+  image_url: https://img.stackshare.io/service/4485/gTawkyAA.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning/blob/master/docker-compose.yaml
+  detection_source: docker-compose.yaml
+  last_updated_by: rong fengliang
+  last_updated_on: 2021-02-08 04:20:17.000000000 Z
+- name: MongoDB
+  description: The database for giant ideas
+  website_url: http://www.mongodb.com/
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1030/leaf-360x360.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning/blob/master/docker-compose.yaml
+  detection_source: docker-compose.yaml
+  last_updated_by: rong fengliang
+  last_updated_on: 2021-02-08 04:20:17.000000000 Z
+- name: PostgreSQL
+  description: A powerful, open source object-relational database system
+  website_url: http://www.postgresql.org/
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1028/ASOhU5xJ.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning/blob/master/docker-compose.yaml
+  detection_source: docker-compose.yaml
+  last_updated_by: rong fengliang
+  last_updated_on: 2021-02-08 04:20:17.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning
+  detection_source: Repo Metadata
+- name: Zookeeper
+  description: Because coordinating distributed systems is a Zoo
+  website_url: http://zookeeper.apache.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Open Source Service Discovery
+  image_url: https://img.stackshare.io/service/1528/apache-zookeeper.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning/blob/master/docker-compose.yaml
+  detection_source: docker-compose.yaml
+  last_updated_by: rong fengliang
+  last_updated_on: 2021-02-08 04:20:17.000000000 Z
+- name: Mongo
+  description: Heroku provides services and tools to build, run, and scale web applications.
+    Follow @herokustatus for platform updates. A @salesforce company.
+  website_url: http://wedesignapps.herokuapp.com
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/3519/3wgIDj3j_normal.png
+  detection_source_url: https://github.com/rongfengliang/dremio-cluster-learning/blob/master/docker-compose.yaml
+  detection_source: docker-compose.yaml
+  last_updated_by: rong fengliang
+  last_updated_on: 2021-02-08 04:20:17.000000000 Z
